@@ -8272,4 +8272,121 @@
         });
         </script>
     </body>
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouton Pop-up</title>
+    <style>
+        /* Style pour le bouton */
+        .popup-button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #333; /* Définie la couleur de fond du bouton 
+            pour choisir la couleur voulue tapper HTML couleur sur internet et recopier le code hex correspondant*/
+            color: white; /* Définie la couleur du bouton*/
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
+        }
+
+        /* Style pour le conteneur du pop-up */
+        .popup-container {
+            display: none;
+            position: fixed;
+            bottom: 50px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Assure que le pop-up reste au-dessus des autres éléments */
+        }
+
+        /* Style pour chaque élément de la légende */
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .legend-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+/* définie le nom de la couleur voulue (.nom) avec la couleur correspondante( ex :darkgreen/lightgeen) */
+        .dark-green {
+            background-color: darkgreen;
+        }
+
+        .light-green {
+            background-color: lightgreen;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+        .blue{
+            background-color: dodgerblue;
+        }
+        .red{
+            background-color: red
+        }
+        .orange{
+            background-color: darkorange
+        }
+    </style>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById('popup-container');
+            if (popup.style.display === 'none' || popup.style.display === '') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<button class="popup-button" onclick="togglePopup()">Afficher la légende</button>
+
+<div id="popup-container" class="popup-container">
+    /* Définie un champ dans la légende */
+    <div class="legend-item">
+        <div class="legend-color dark-green"></div> /* Choix de la couleur(nom définie au dessus) */
+        <span>Projet TVB 2019-2020</span> /* Texte à mettre dans la légende */
+    </div>
+    /* Définie un champ dans la légende */
+    /* Tous les autres blocs en dessous fonctionne de la même manière*/
+    <div class="legend-item">
+        <div class="legend-color light-green"></div>
+        <span>Projet TVB 2021-2022</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend-color yellow"></div>
+        <span>Projet Mad et Moselle</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend-color orange"></div>
+        <span>Projet BGE </span>
+    </div>
+    <div class="legend-item">
+        <div class="legend-color red"></div>
+        <span>Haies Détruites</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend-color blue"></div>
+        <span>Replantation</span>
+    </div>
+</div>
+</body> 
+
 </html>
