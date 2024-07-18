@@ -1,0 +1,1 @@
+var json_CPIEBonze_52 = {"type":"FeatureCollection","name":"CPIEBonze_52","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1"},"geometry":{"type":"MultiLineString","coordinates":[[[5.591158727742046,49.097574819532106],[5.591437798945992,49.097568277778251]]]}}]}
